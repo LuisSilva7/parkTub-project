@@ -5,16 +5,12 @@ import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
-import org.acsi.dto.ActiveParkingSessionDto;
 import org.acsi.dto.PaymentDto;
 import org.acsi.exceptions.ActiveParkingSessionNotFound;
-import org.acsi.request.ParkingSessionRequest;
 import org.acsi.response.ApiResponse;
 import org.acsi.service.PaymentService;
 
 import java.util.List;
-import java.util.Map;
 
 @Path("/payment")
 @Produces(MediaType.APPLICATION_JSON)
@@ -39,11 +35,11 @@ public class PaymentController {
     @POST
     @Path("/{id}")
     @Transactional
-    public Response createCheckoutSession(@PathParam("id") Long id) {
+    public ApiResponse createCheckoutSession(@PathParam("id") Long id) {
         try {
-            return paymentService.createCheckoutSession(id);
+            return new ApiResponse("Checkout created successfully!", paymentService.createCheckoutSession(id));
         } catch (StripeException e) {
-            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(e.getMessage()).build();
+            return new ApiResponse("Unknown error!", null);
         }
     }
 }
