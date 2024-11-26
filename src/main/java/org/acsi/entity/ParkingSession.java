@@ -4,32 +4,37 @@ import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Entity
 @Table(name = "parking_session")
 public class ParkingSession extends PanacheEntityBase {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
 
-    private String licensePlate;
-    private Double latitude;
-    private Double longitude;
+    public String licensePlate;
+    public Double latitude;
+    public Double longitude;
 
-    private LocalDateTime checkInTime;
-    private LocalDateTime checkOutTime;
-    private LocalDateTime totalTime;
+    public LocalDateTime checkInTime;
+    public LocalDateTime checkOutTime;
+    public LocalDateTime totalTime;
 
-    private Boolean isActive;
-    private Double totalAmount;
+    public Boolean isActive;
 
-    //relacao com parkingLot
     @ManyToOne
-    private ParkingLot parkingLot; // Estacionamento onde ocorreu o check-in
+    @JoinColumn(name = "parking_lot_id", nullable = false)
+    public ParkingLot parkingLot;
 
-    //relacao com payment
+    @OneToOne(mappedBy = "parkingSession", cascade = CascadeType.ALL, orphanRemoval = true)
+    public Payment payment;
 
-    //relacao com user
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    public User user;
+
+    public static ParkingSession getActiveParkingSession() {
+        return ParkingSession.find("isActive", true).firstResult();
+    }
 }

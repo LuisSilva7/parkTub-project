@@ -4,22 +4,21 @@ import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Entity
 @Table(name = "payment")
 public class Payment extends PanacheEntityBase {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
 
-    private LocalDateTime paymentDueDate; // Prazo que falta para pagamento expirar
-    private LocalDateTime paymentDate; // Data em que foi pago
-    private Double amount; // Valor do pagamento
-    private Boolean isPaid; // Status (pago ou pendente)
+    public LocalDateTime paymentDueDate; // Prazo que falta para pagamento expirar
+    public LocalDateTime paymentDate; // Data em que foi pago
+    public Double amount;
+    public Boolean isPaid;
 
-    //relacao com parkingSession
     @OneToOne
-    private ParkingSession parkingSession; // Sessão associada
+    @JoinColumn(name = "parking_session_id", nullable = false, unique = true)
+    public ParkingSession parkingSession;
 }

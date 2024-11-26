@@ -3,23 +3,23 @@ package org.acsi.entity;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
 
-import java.util.UUID;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "bonus")
 public class Bonus extends PanacheEntityBase {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
 
-    private String description;
-    private Double discountPercentage;
-    private int pointsRequired;
+    public String description;
+    public Double discountPercentage;
+    public int pointsRequired;
 
-    private Boolean isActive;
+    public Boolean isActive;
 
-    //relacao com user
-    @ManyToOne
-    private User user; // Usuário associado (se aplicável)
+    @ManyToMany(mappedBy="bonus")
+    public List<User> users = new ArrayList<>();
 }
