@@ -19,7 +19,7 @@ public class ParkingSession extends PanacheEntityBase {
 
     public LocalDateTime checkInTime;
     public LocalDateTime checkOutTime;
-    public LocalDateTime totalTime;
+    public Long totalTime;
 
     public Boolean isActive;
 

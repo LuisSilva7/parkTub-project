@@ -13,7 +13,6 @@ public class Payment extends PanacheEntityBase {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    public LocalDateTime paymentDueDate; // Prazo que falta para pagamento expirar
     public LocalDateTime paymentDate; // Data em que foi pago
     public Double amount;
     public Boolean isPaid;
