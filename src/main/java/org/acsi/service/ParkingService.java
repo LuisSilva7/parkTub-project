@@ -12,9 +12,6 @@ import org.acsi.request.ParkingSessionRequest;
 import org.acsi.request.UpdateParkingSessionRequest;
 
 import java.time.Duration;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @ApplicationScoped
 public class ParkingService {

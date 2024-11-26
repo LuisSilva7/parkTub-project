@@ -1,14 +1,18 @@
 package org.acsi.config;
 
+import com.stripe.Stripe;
 import io.quarkus.runtime.StartupEvent;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.event.Observes;
 import jakarta.transaction.Transactional;
 import org.acsi.entity.ParkingLot;
 import org.acsi.entity.User;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 @ApplicationScoped
 public class OnStartConfig {
+
+    @ConfigProperty(name = "stripe.api.key") String apiKey;
 
     @Transactional
     void onStart(@Observes StartupEvent ev) {
@@ -30,5 +34,7 @@ public class OnStartConfig {
 
             parkingLot.persist();
         }
+
+        Stripe.apiKey = apiKey;
     }
 }
