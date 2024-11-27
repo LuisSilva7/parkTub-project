@@ -1,16 +1,22 @@
 package org.acsi.controller;
 
+import io.quarkus.qute.TemplateInstance;
+import io.quarkus.qute.Template;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 import org.acsi.dto.ActiveParkingSessionDto;
 import org.acsi.dto.InactiveParkingSessionDto;
+import org.acsi.dto.ParkingLotDto;
 import org.acsi.exceptions.ActiveParkingSessionNotFound;
 import org.acsi.request.ParkingSessionRequest;
 import org.acsi.request.UpdateParkingSessionRequest;
 import org.acsi.response.ApiResponse;
 import org.acsi.service.ParkingService;
+
+import java.util.List;
 
 @Path("/parking")
 @Produces(MediaType.APPLICATION_JSON)
@@ -18,7 +24,28 @@ import org.acsi.service.ParkingService;
 public class ParkingController {
 
     @Inject
+    Template index;
+
+    @Inject
     ParkingService parkingService;
+
+    @GET
+    @Path("/test")
+    public Response test() {
+        String name = "luis";
+        TemplateInstance templateInstance = index.data("name", name);
+        return Response.ok(templateInstance).build();
+    }
+
+    @GET
+    public ApiResponse getAllParkingLots() {
+        try {
+            List<ParkingLotDto> parkingLotDtos = parkingService.getAllParkingLots();
+            return new ApiResponse("Parking lots obtained successfully!", parkingLotDtos);
+        } catch (Exception e) {
+            return new ApiResponse("Unknown error!", null);
+        }
+    }
 
     @GET
     @Path("/active-session")

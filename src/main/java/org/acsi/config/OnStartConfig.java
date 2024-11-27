@@ -35,6 +35,17 @@ public class OnStartConfig {
             parkingLot.persist();
         }
 
+        if (ParkingLot.findByAddress("Rua do Raio") == null) {
+            ParkingLot parkingLot = new ParkingLot();
+            parkingLot.address = "Rua do Raio";
+            parkingLot.latitude = -17.892728;
+            parkingLot.longitude = -98.180482;
+            parkingLot.totalSpots = 15;
+            parkingLot.availableSpots = 13;
+
+            parkingLot.persist();
+        }
+
         Stripe.apiKey = apiKey;
     }
 }
