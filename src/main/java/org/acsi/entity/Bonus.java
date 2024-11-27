@@ -18,8 +18,10 @@ public class Bonus extends PanacheEntityBase {
     public Double discountPercentage;
     public int pointsRequired;
 
-    public Boolean isActive;
-
     @ManyToMany(mappedBy="bonus")
     public List<User> users = new ArrayList<>();
+
+    public static Bonus findByPointsRequired(int points) {
+        return find("pointsRequired", points).firstResult();
+    }
 }

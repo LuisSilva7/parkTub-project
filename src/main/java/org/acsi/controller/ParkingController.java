@@ -10,7 +10,7 @@ import jakarta.ws.rs.core.Response;
 import org.acsi.dto.ActiveParkingSessionDto;
 import org.acsi.dto.InactiveParkingSessionDto;
 import org.acsi.dto.ParkingLotDto;
-import org.acsi.exceptions.ActiveParkingSessionNotFound;
+import org.acsi.exceptions.ObjectNotFound;
 import org.acsi.request.ParkingSessionRequest;
 import org.acsi.request.UpdateParkingSessionRequest;
 import org.acsi.response.ApiResponse;
@@ -53,7 +53,7 @@ public class ParkingController {
         try {
             ActiveParkingSessionDto activeParkingSessionDto = parkingService.getActiveParkingSession();
             return new ApiResponse("Parking session obtained successfully!", activeParkingSessionDto);
-        } catch (ActiveParkingSessionNotFound e) {
+        } catch (ObjectNotFound e) {
             return new ApiResponse(e.getMessage(), null);
         } catch (Exception e) {
             return new ApiResponse("Unknown error!", null);

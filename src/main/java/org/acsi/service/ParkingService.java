@@ -8,7 +8,7 @@ import org.acsi.entity.ParkingLot;
 import org.acsi.entity.ParkingSession;
 import org.acsi.entity.Payment;
 import org.acsi.entity.User;
-import org.acsi.exceptions.ActiveParkingSessionNotFound;
+import org.acsi.exceptions.ObjectNotFound;
 import org.acsi.request.ParkingSessionRequest;
 import org.acsi.request.UpdateParkingSessionRequest;
 
@@ -26,7 +26,7 @@ public class ParkingService {
 
     public ActiveParkingSessionDto getActiveParkingSession() {
         if(ParkingSession.getActiveParkingSession() == null) {
-            throw new ActiveParkingSessionNotFound("Active parking Session not found!");
+            throw new ObjectNotFound("Active parking Session not found!");
         }
         return convertToActiveParkingSessionDto(ParkingSession.getActiveParkingSession());
     }

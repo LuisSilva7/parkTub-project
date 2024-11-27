@@ -5,6 +5,7 @@ import io.quarkus.runtime.StartupEvent;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.event.Observes;
 import jakarta.transaction.Transactional;
+import org.acsi.entity.Bonus;
 import org.acsi.entity.ParkingLot;
 import org.acsi.entity.User;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
@@ -20,9 +21,30 @@ public class OnStartConfig {
             User defaultUser = new User();
             defaultUser.name = "Luís";
             defaultUser.email = "luis17@gmail.com";
+            defaultUser.points = 60;
 
             defaultUser.persist();
         }
+
+        if(Bonus.findByPointsRequired(10) == null) {
+            Bonus bonus = new Bonus();
+            bonus.description = "Obtém um desconto no pagamento!";
+            bonus.pointsRequired = 10;
+            bonus.discountPercentage = 10.0;
+
+            bonus.persist();
+        }
+
+        if(Bonus.findByPointsRequired(20) == null) {
+            Bonus bonus = new Bonus();
+            bonus.description = "Obtém um desconto no pagamento!";
+            bonus.pointsRequired = 20;
+            bonus.discountPercentage = 20.0;
+            bonus.users.add(User.findByName("Luís"));
+
+            bonus.persist();
+        }
+
 
         if (ParkingLot.findByAddress("Avenida da Liberdade") == null) {
             ParkingLot parkingLot = new ParkingLot();
