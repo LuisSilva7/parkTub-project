@@ -1,0 +1,57 @@
+.checkInContainer {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #017cb7;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #017cb7;
+}
+
+.info {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  color: #017cb7;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.checkoutButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutButton:hover {
+  background-color: #c0392b;
+}
+
+.loading,
+.noSession {
+  text-align: center;
+  margin: 20px;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}

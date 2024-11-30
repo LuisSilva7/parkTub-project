@@ -1,0 +1,125 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.parkingLotsContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-height: 260px;
+  overflow-y: scroll;
+}
+
+h2 {
+  text-align: center;
+  color: #017cb7;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.parkingLots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.parkingLot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 400px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.parkingLotLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+}
+
+.parkingLotName {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #017cb7;
+}
+
+.availableSpots {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-top: 5px;
+}
+
+.checkInButton {
+  padding: 10px;
+  background-color: #01a7f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+}
+
+.checkInButton:hover {
+  background-color: #017cb7;
+}
+
+.lotName {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.checkInForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.licensePlateInput {
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 80%;
+  max-width: 300px;
+}
+
+.confirmCheckInButton {
+  padding: 10px;
+  background-color: #01a7f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 80%;
+}
+
+.confirmCheckInButton:hover {
+  background-color: #017cb7;
+}
+
+.loadData {
+  color: white;
+}
