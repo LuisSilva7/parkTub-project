@@ -13,7 +13,10 @@
   - **Google Maps API** - For displaying real-time available parking spots on a map and assisting users in locating them.
 
 - **Backend**:
+  - **Microservices Architecture** - The backend is structured into independent services, promoting scalability and fault tolerance.
   - **Java** - Programming language used for backend development.
-  - **Quarkus** - Java framework for building the backend API with a focus on fast startup and low memory usage.
+  - **Spring Framework** - A comprehensive framework for building the backend API with a focus on simplicity, productivity, and robust data handling.
   - **MySQL** - Relational database for storing parking, payment, and user data.
   - **Stripe** - Payment processing system for handling parking payments.
+  - **Niop** - A low-code platform that simplifies the orchestration of intelligent systems, enabling easy programming of machines integrating AI, robotics, and automation.
+  - **Kafka** - A distributed messaging system designed for high-throughput, real-time data streaming and synchronization, ensuring accurate updates of parking space availability.
