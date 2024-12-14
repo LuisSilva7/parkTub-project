@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="parking" />
+        <module name="config-server" />
+        <module name="discovery" />
+        <module name="bonus" />
+        <module name="payment" />
+        <module name="car-count-producer" />
+        <module name="gateway" />
+        <module name="customer" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bonus" options="-parameters" />
+      <module name="car-count-producer" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="customer" options="-parameters" />
+      <module name="discovery" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="parking" options="-parameters" />
+      <module name="payment" options="-parameters" />
+    </option>
+  </component>
+</project>

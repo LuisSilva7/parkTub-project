@@ -1,0 +1,41 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+src/main/resources/configurations/application.yml
+src/main/resources/configurations/bonus-service.yml
+src/main/resources/configurations/car-count-producer-service.yml
+src/main/resources/configurations/customer-service.yml
+src/main/resources/configurations/discovery-service.yml
+src/main/resources/configurations/gateway-service.yml
+src/main/resources/configurations/parking-service.yml
+src/main/resources/configurations/payment-service.yml
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/

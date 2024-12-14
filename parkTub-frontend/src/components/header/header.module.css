@@ -1,0 +1,52 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #017cb7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  margin-left: 8px;
+  color: #ffffff;
+}
+
+.navLinks {
+  display: flex;
+  gap: 13px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #01a7f4;
+}
+
+.userName {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.site-logo {
+  height: 25px;
+}

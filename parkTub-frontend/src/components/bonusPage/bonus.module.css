@@ -1,0 +1,74 @@
+.bonusContainer {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 10px;
+  background-color: #c6edff1b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.points {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.bonusList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bonusItem {
+  background-color: #c6edff2d;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.bonusItem p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.bonusButton {
+  padding: 10px;
+  background-color: #01a7f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.bonusButton:hover {
+  background-color: #017cb7;
+}
+
+.loading,
+.noBonus {
+  text-align: center;
+  margin: 20px;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.bigger {
+  font-size: 1.2rem;
+}
