@@ -1,6 +1,5 @@
 package org.parkTub.parking.parkingSession;
 
-import aj.org.objectweb.asm.commons.Remapper;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

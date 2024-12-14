@@ -3,20 +3,17 @@ package org.parkTub.payment.config;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.parkTub.payment.payment.Payment;
-import org.parkTub.payment.payment.PaymentRepository;
 import org.parkTub.payment.payment.PaymentService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Configuration
 @RequiredArgsConstructor
 public class DefaultPaymentsConfig implements CommandLineRunner {
 
     private final PaymentService paymentService;
-    private final PaymentRepository parkingLotRepository;
 
     @Override
     @Transactional
