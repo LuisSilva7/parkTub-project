@@ -52,7 +52,6 @@ const Payments = () => {
     return a.isPaid ? 1 : -1;
   });
 
-  // Função para lidar com o pagamento
   const handlePayment = async (paymentId) => {
     try {
       const response = await fetch(
@@ -70,7 +69,6 @@ const Payments = () => {
         throw new Error("Erro ao realizar o pagamento");
       }
 
-      //abrir a pagina stripe
       const data = await response.text();
       console.log(data);
       const jsonObject = JSON.parse(data);
@@ -103,7 +101,6 @@ const Payments = () => {
               <strong>Tempo no local: </strong> {payment.totalTime} minutos
             </p>
 
-            {/* Verificando o status de pagamento */}
             {payment.isPaid ? (
               <div>
                 <p>

@@ -21,7 +21,6 @@ const ParkingLotsMap = () => {
         zoom: 17,
       });
 
-      // Dados dos locais
       const locations = [
         {
           position: { lat: 41.545453, lng: -8.428053 },
@@ -40,7 +39,6 @@ const ParkingLotsMap = () => {
         },
       ];
 
-      // Adiciona marcadores e InfoWindows
       locations.forEach((location) => {
         const marker = new google.maps.Marker({
           position: location.position,
@@ -62,7 +60,6 @@ const ParkingLotsMap = () => {
           `,
         });
 
-        // Exibe a InfoWindow ao clicar no marcador
         marker.addListener("click", () => {
           infoWindow.open(map, marker);
         });

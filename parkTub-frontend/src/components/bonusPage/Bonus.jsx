@@ -66,7 +66,6 @@ const Bonus = () => {
     return a.isActive ? 1 : -1;
   });
 
-  // Função para lidar com o bonus!!!
   const handleBonus = async (bonusId, pointsRequired) => {
     try {
       const now = new Date().toISOString();
@@ -114,7 +113,6 @@ const Bonus = () => {
               <strong>Pontos necessários: </strong> {bonus.pointsRequired}
             </p>
 
-            {/* Verificando o status de bônus */}
             {bonus.id === activeBonus ? (
               <div>
                 <p>

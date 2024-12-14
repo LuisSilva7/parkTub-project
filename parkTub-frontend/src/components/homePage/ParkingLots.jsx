@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import Popup from "../popups/Popup"; // Importa o componente Popup
-import styles from "./parkingLots.module.css"; // Importa o CSS
+import Popup from "../popups/Popup";
+import styles from "./parkingLots.module.css";
 
 const ParkingLots = () => {
   const [parkingLots, setParkingLots] = useState([]);
-  const [licensePlate, setLicensePlate] = useState(""); // Estado para armazenar a matrícula
-  const [confirmLicensePlate, setConfirmLicensePlate] = useState(""); // Estado para armazenar a confirmação da matrícula
-  const [selectedLot, setSelectedLot] = useState(null); // Estado para armazenar o estacionamento selecionado
+  const [licensePlate, setLicensePlate] = useState("");
+  const [confirmLicensePlate, setConfirmLicensePlate] = useState("");
+  const [selectedLot, setSelectedLot] = useState(null);
   const [popup, setPopup] = useState({
     isVisible: false,
     message: "",
     color: "",
-  }); // Estado para o popup
+  });
 
   useEffect(() => {
     const fetchParkingLots = async () => {
@@ -28,16 +28,15 @@ const ParkingLots = () => {
     setTimeout(
       () => setPopup({ isVisible: false, message: "", color: "" }),
       3000
-    ); // Esconde o popup após 3 segundos
+    );
   };
 
   const isValidLicensePlate = (plate) => {
-    const licensePlatePattern = /^\d{2}[A-Z]{2}\d{2}$/; // Exemplo: 90KF90
+    const licensePlatePattern = /^\d{2}[A-Z]{2}\d{2}$/;
     return licensePlatePattern.test(plate);
   };
 
   const handleCheckIn = async () => {
-    // Verifica se as matrículas são iguais antes de continuar
     if (!licensePlate || !selectedLot) {
       showPopup("Por favor, forneça a matrícula.", "#ff848f");
       return;
@@ -81,7 +80,6 @@ const ParkingLots = () => {
         throw new Error("Erro ao realizar o Check-In");
       }
 
-      // Limpar estados após o check-in bem sucedido
       setLicensePlate("");
       setConfirmLicensePlate("");
       setSelectedLot(null);
@@ -108,7 +106,6 @@ const ParkingLots = () => {
                   </p>
                 </div>
                 <div className={styles.parkingLotRight}>
-                  {/* Botão "Check-In" */}
                   <button
                     className={styles.checkInButton}
                     onClick={() => setSelectedLot(lot)}
@@ -123,7 +120,6 @@ const ParkingLots = () => {
           )}
         </div>
 
-        {/* Se um estacionamento foi selecionado, exibe os campos para a matrícula */}
         {selectedLot && (
           <div className={styles.checkInForm}>
             <h2 className={styles.lotName}>{selectedLot.name}</h2>
@@ -151,7 +147,6 @@ const ParkingLots = () => {
         )}
       </div>
 
-      {/* Popup para exibição de mensagens */}
       {popup.isVisible && (
         <Popup
           message={popup.message}
