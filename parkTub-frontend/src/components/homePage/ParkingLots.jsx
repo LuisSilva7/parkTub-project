@@ -14,7 +14,6 @@ const ParkingLots = () => {
   });
 
   useEffect(() => {
-    // Fetch inicial dos estacionamentos
     const fetchParkingLots = async () => {
       const response = await fetch("http://localhost:8222/api/v1/parking-lots");
       const jsonResponse = await response.json();
@@ -23,7 +22,6 @@ const ParkingLots = () => {
 
     fetchParkingLots();
 
-    // Configuração do SSE
     const eventSource = new EventSource(
       "http://localhost:8222/api/v1/parking-lots/update-available-spots"
     );
@@ -31,17 +29,15 @@ const ParkingLots = () => {
     eventSource.onmessage = (event) => {
       console.log("Atualização recebida:", event.data);
 
-      // Atualizar o estado com os dados recebidos
-      const updatedParkingLots = JSON.parse(event.data); // Parse dos dados recebidos
+      const updatedParkingLots = JSON.parse(event.data);
       setParkingLots(updatedParkingLots);
     };
 
     eventSource.onerror = (error) => {
       console.error("Erro na conexão SSE:", error);
-      eventSource.close(); // Fecha a conexão em caso de erro
+      eventSource.close();
     };
 
-    // Cleanup: Fecha o EventSource ao desmontar o componente
     return () => {
       eventSource.close();
     };
