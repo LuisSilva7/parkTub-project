@@ -22,6 +22,7 @@
 
 - **Backend**:
   - **Microservices Architecture** - The backend is structured into independent services, promoting scalability and fault tolerance.
+  - **Docker** - A containerization platform used to package and deploy the application in lightweight, isolated environments, ensuring consistency across different environments and simplifying the deployment process.
   - **Java** - Programming language used for backend development.
   - **Spring Framework** - A comprehensive framework for building the backend API with a focus on simplicity, productivity, and robust data handling.
   - **MySQL** - Relational database for storing parking, payment, and user data.
@@ -29,3 +30,4 @@
   - **Niop** - A low-code platform that simplifies the orchestration of intelligent systems, enabling easy programming of machines integrating AI, robotics, and automation.
   - **Kafka** - A distributed messaging system designed for high-throughput, real-time data streaming and synchronization, ensuring accurate updates of parking space availability.
   - **SSE (Server-Sent Events)** - A technology used to establish a one-way connection from the server to the client, allowing the server to send real-time updates (e.g., parking lot availability) directly to the client over HTTP.
+  - **Zipkin** - A distributed tracing system that helps monitor and troubleshoot the performance of microservices, providing detailed insights into latency and inter-service communication.
