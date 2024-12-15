@@ -13,6 +13,7 @@ public class ParkingLotService {
 
     private final ParkingLotRepository parkingLotRepository;
     private final ParkingLotMapper parkingLotMapper;
+    private final SseNotifier sseNotifier;
 
     public boolean isParkingLotRepositoryEmpty() {
         return parkingLotRepository.count() == 0;
@@ -46,5 +47,6 @@ public class ParkingLotService {
 
         parkingLot.setAvailableSpots(parkingLot.getTotalSpots() - carCountConfirmation.carCount());
         parkingLotRepository.save(parkingLot);
+        sseNotifier.sendUpdate(findAll());
     }
 }

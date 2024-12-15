@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ import java.util.List;
 public class ParkingLotController {
 
     private final ParkingLotService parkingLotService;
+    private final SseNotifier sseNotifier;
 
     @GetMapping
     public ResponseEntity<ApiResponse<List<ParkingLotResponse>>> findAllParkingLots() {
@@ -23,5 +25,10 @@ public class ParkingLotController {
 
         return ResponseEntity.ok(new ApiResponse<>(
                 "Parking lots obtained successfully!", parkingLotResponses));
+    }
+
+    @GetMapping("/update-available-spots")
+    public SseEmitter subscribe() {
+        return sseNotifier.subscribe();
     }
 }
