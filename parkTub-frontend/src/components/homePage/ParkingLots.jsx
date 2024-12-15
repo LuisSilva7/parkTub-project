@@ -15,28 +15,54 @@ const ParkingLots = () => {
 
   useEffect(() => {
     const fetchParkingLots = async () => {
-      const response = await fetch("http://localhost:8222/api/v1/parking-lots");
-      const jsonResponse = await response.json();
-      setParkingLots(jsonResponse.data);
+      try {
+        const response = await fetch(
+          "http://localhost:8222/api/v1/parking-lots"
+        );
+        const jsonResponse = await response.json();
+        setParkingLots(jsonResponse.data);
+      } catch (error) {
+        console.error("Erro ao buscar estacionamentos:", error);
+      }
     };
 
     fetchParkingLots();
 
-    const eventSource = new EventSource(
-      "http://localhost:8222/api/v1/parking-lots/update-available-spots"
-    );
+    const setupEventSource = () => {
+      const eventSource = new EventSource(
+        "http://localhost:8222/api/v1/parking-lots/update-available-spots"
+      );
 
-    eventSource.onmessage = (event) => {
-      console.log("Atualização recebida:", event.data);
+      eventSource.onmessage = (event) => {
+        try {
+          console.log("Atualização recebida:", event.data);
+          const updatedParkingLots = JSON.parse(event.data);
 
-      const updatedParkingLots = JSON.parse(event.data);
-      setParkingLots(updatedParkingLots);
+          setParkingLots((prevLots) => {
+            const updatedMap = new Map(
+              [...prevLots, ...updatedParkingLots].map((lot) => [lot.id, lot])
+            );
+            return Array.from(updatedMap.values());
+          });
+        } catch (error) {
+          console.error("Erro ao processar dados SSE:", error);
+        }
+      };
+
+      eventSource.onerror = (error) => {
+        console.error("Erro na conexão SSE:", error);
+        eventSource.close();
+
+        setTimeout(() => {
+          console.log("Tentando reconectar SSE...");
+          setupEventSource();
+        }, 5000);
+      };
+
+      return eventSource;
     };
 
-    eventSource.onerror = (error) => {
-      console.error("Erro na conexão SSE:", error);
-      eventSource.close();
-    };
+    const eventSource = setupEventSource();
 
     return () => {
       eventSource.close();
