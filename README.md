@@ -91,7 +91,7 @@ The application will be available at [http://localhost:5173](http://localhost:51
 
 ### Home Page
 
-![Home Page](screenshots/home.jpg)
+<img src="screenshots/home.jpg" alt="Home Page" height="300">
 
 ### Home2 Page
 
