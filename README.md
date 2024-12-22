@@ -99,5 +99,3 @@ The application will be available at [http://localhost:5173](http://localhost:51
 ### Maintainer
 
 - # **Luis Silva** (Owner/Developer)
-  - **SSE (Server-Sent Events)** - A technology used to establish a one-way connection from the server to the client, allowing the server to send real-time updates (e.g., parking lot availability) directly to the client over HTTP.
-  - **Zipkin** - A distributed tracing system that helps monitor and troubleshoot the performance of microservices, providing detailed insights into latency and inter-service communication.
