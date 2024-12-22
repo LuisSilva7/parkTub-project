@@ -98,4 +98,4 @@ The application will be available at [http://localhost:5173](http://localhost:51
 
 ### Maintainer
 
-- # **Luis Silva** (Owner/Developer)
+**Luis Silva** (Owner/Developer)
