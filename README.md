@@ -95,19 +95,19 @@ The application will be available at [http://localhost:5173](http://localhost:51
 
 ### Home2 Page
 
-![Home2 Page](screenshots/home2.jpg)
+<img src="screenshots/home2.jpg" alt="Home2 Page" height="600">
 
 ### Bonus Page
 
-![Bonus Page](screenshots/bonus.jpg)
+<img src="screenshots/bonus.jpg" alt="Bonus Page" height="600">
 
 ### Payments Page
 
-![Payments Page](screenshots/payments.jpg)
+<img src="screenshots/payments.jpg" alt="Payments Page" height="600">
 
 ### Stripe Page
 
-![Stripe Page](screenshots/stripe.jpg)
+<img src="screenshots/stripe.jpg" alt="Stripe Page" height="600">
 
 ### Maintainer
 
