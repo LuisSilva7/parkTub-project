@@ -54,7 +54,6 @@ public class PaymentService {
             throw new PaymentNotFoundException("No payments were found!");
         }
 
-
         ResponseEntity<ApiResponse<List<ParkingSessionResponse>>> response = parkingSessionClient
                 .findAllParkingSessionsByCostumerId(customerId);
 
@@ -107,11 +106,9 @@ public class PaymentService {
 
         long amount = (long) (payment.getAmount() * 100);
 
-        // Calcula o valor do desconto
         long discountAmount = request.discount() != 0.0 ?
                 (long) ((payment.getAmount() * (request.discount() / 100.0)) * 100) : 0;
 
-        // Aplica o desconto
         amount = amount - discountAmount;
 
         SessionCreateParams.LineItem.PriceData.ProductData productData =
@@ -128,8 +125,8 @@ public class PaymentService {
 
         SessionCreateParams.LineItem.PriceData priceData =
                 SessionCreateParams.LineItem.PriceData.builder()
-                        .setCurrency("eur") // Substitua pela moeda desejada
-                        .setUnitAmount(amount) // Valor em centavos
+                        .setCurrency("eur")
+                        .setUnitAmount(amount)
                         .setProductData(productData)
                         .build();
 

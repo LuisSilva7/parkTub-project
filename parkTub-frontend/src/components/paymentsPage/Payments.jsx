@@ -48,8 +48,16 @@ const Payments = () => {
   }
 
   const sortedPayments = [...payments].sort((a, b) => {
-    if (a.isPaid === b.isPaid) return 0;
-    return a.isPaid ? 1 : -1;
+    if (!a.paymentDate && !b.paymentDate) {
+      return 0;
+    }
+    if (!a.paymentDate) {
+      return -1;
+    }
+    if (!b.paymentDate) {
+      return 1;
+    }
+    return new Date(b.paymentDate) - new Date(a.paymentDate);
   });
 
   const handlePayment = async (paymentId) => {
@@ -70,9 +78,7 @@ const Payments = () => {
       }
 
       const data = await response.text();
-      console.log(data);
       const jsonObject = JSON.parse(data);
-      console.log(jsonObject);
 
       window.open(jsonObject.data);
     } catch (error) {

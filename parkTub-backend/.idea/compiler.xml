@@ -11,6 +11,7 @@
         <module name="config-server" />
         <module name="discovery" />
         <module name="bonus" />
+        <module name="parktub-project" />
         <module name="payment" />
         <module name="car-count-producer" />
         <module name="gateway" />
@@ -27,6 +28,7 @@
       <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="parking" options="-parameters" />
+      <module name="parktub-project" options="-parameters" />
       <module name="payment" options="-parameters" />
     </option>
   </component>

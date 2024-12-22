@@ -14,6 +14,14 @@ TUB Parking aims to simplify parking management for urban transport users. By of
 - **Bonus Rewards**: Users can access and activate available bonuses, redeeming their points for rewards and benefits seamlessly.
 - **Mobile Design**: Access the platform on smartphones for seamless user experience.
 
+## Features
+
+- **Real-Time Parking Lot Updates** - Parking lot availability is dynamically updated through seamless integration with Niop and Kafka, ensuring users always have the latest information on available spots.
+- **Live Parking Lot Details**: Users can view detailed information about all parking lots, with real-time updates reflecting changes as they happen.
+- **Parking Session Management**: Users can manage their parking sessions with ease, including creating new sessions (check-in), viewing ongoing sessions, and finalizing sessions (check-out).
+- **Payment Management**: Provides a comprehensive overview of all user payments, allowing them to view details, make payments, and track their payment history.
+- **Bonus Rewards**: Users can access and activate available bonuses, redeeming their points for rewards and benefits seamlessly.
+
 ## Technologies Used
 
 - **Frontend**:
@@ -26,7 +34,11 @@ TUB Parking aims to simplify parking management for urban transport users. By of
 
 - **Backend**:
   - **Microservices Architecture** - The backend is structured into independent services, promoting scalability and fault tolerance.
+<<<<<<< HEAD
   - **Docker**: A containerization platform used to package and deploy the application in lightweight, isolated environments, ensuring consistency across different environments and simplifying the deployment process.
+=======
+  - **Docker** - A containerization platform used to package and deploy the application in lightweight, isolated environments, ensuring consistency across different environments and simplifying the deployment process.
+>>>>>>> fe717fe4a3571e82ba5f300318ac6233a3c3baf5
   - **Java** - Programming language used for backend development.
   - **Spring Boot**: Framework for building the backend API and handling HTTP requests.
   - **Spring Data JPA**: Simplifies database interaction by providing an abstraction layer for managing data persistence.
@@ -37,6 +49,7 @@ TUB Parking aims to simplify parking management for urban transport users. By of
   - **Stripe** - Payment processing system for handling parking payments.
   - **Niop** - A low-code platform that simplifies the orchestration of intelligent systems, enabling easy programming of machines integrating AI, robotics, and automation.
   - **Kafka** - A distributed messaging system designed for high-throughput, real-time data streaming and synchronization, ensuring accurate updates of parking space availability.
+<<<<<<< HEAD
   - **SSE (Server-Sent Events)**: Establishes a one-way connection from the server to the client, allowing real-time updates (e.g., parking lot availability) directly to the client over HTTP.
   - **Zipkin**: A distributed tracing system that helps monitor and troubleshoot the performance of microservices, providing detailed insights into latency and inter-service communication.
 
@@ -90,3 +103,7 @@ The application will be available at [http://localhost:5173](http://localhost:51
 ### Maintainer
 
 - **Luis Silva** (Owner/Developer)
+=======
+  - **SSE (Server-Sent Events)** - A technology used to establish a one-way connection from the server to the client, allowing the server to send real-time updates (e.g., parking lot availability) directly to the client over HTTP.
+  - **Zipkin** - A distributed tracing system that helps monitor and troubleshoot the performance of microservices, providing detailed insights into latency and inter-service communication.
+>>>>>>> fe717fe4a3571e82ba5f300318ac6233a3c3baf5
