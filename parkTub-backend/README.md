@@ -14,7 +14,7 @@
 2. **Navigate to the project backend directory:**
 
    ```bash
-   cd movieVerse-project/parkTub-backend
+   cd parkTub-project/parkTub-backend
    ```
 
 3. **Run all containers:**

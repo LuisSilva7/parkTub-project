@@ -14,14 +14,6 @@ TUB Parking aims to simplify parking management for urban transport users. By of
 - **Bonus Rewards**: Users can access and activate available bonuses, redeeming their points for rewards and benefits seamlessly.
 - **Mobile Design**: Access the platform on smartphones for seamless user experience.
 
-## Features
-
-- **Real-Time Parking Lot Updates** - Parking lot availability is dynamically updated through seamless integration with Niop and Kafka, ensuring users always have the latest information on available spots.
-- **Live Parking Lot Details**: Users can view detailed information about all parking lots, with real-time updates reflecting changes as they happen.
-- **Parking Session Management**: Users can manage their parking sessions with ease, including creating new sessions (check-in), viewing ongoing sessions, and finalizing sessions (check-out).
-- **Payment Management**: Provides a comprehensive overview of all user payments, allowing them to view details, make payments, and track their payment history.
-- **Bonus Rewards**: Users can access and activate available bonuses, redeeming their points for rewards and benefits seamlessly.
-
 ## Technologies Used
 
 - **Frontend**:
@@ -35,7 +27,6 @@ TUB Parking aims to simplify parking management for urban transport users. By of
 - **Backend**:
   - **Microservices Architecture** - The backend is structured into independent services, promoting scalability and fault tolerance.
   - **Docker**: A containerization platform used to package and deploy the application in lightweight, isolated environments, ensuring consistency across different environments and simplifying the deployment process.
-  - **Docker** - A containerization platform used to package and deploy the application in lightweight, isolated environments, ensuring consistency across different environments and simplifying the deployment process.
   - **Java** - Programming language used for backend development.
   - **Spring Boot**: Framework for building the backend API and handling HTTP requests.
   - **Spring Data JPA**: Simplifies database interaction by providing an abstraction layer for managing data persistence.
@@ -62,7 +53,7 @@ TUB Parking aims to simplify parking management for urban transport users. By of
 2. **Navigate to the project backend directory:**
 
    ```bash
-   cd movieVerse-project/parkTub-backend
+   cd parkTub-project/parkTub-backend
    ```
 
 3. **Run all containers:**
@@ -80,7 +71,7 @@ TUB Parking aims to simplify parking management for urban transport users. By of
 5. **Navigate to the project frontend directory:**
 
    ```bash
-   cd movieVerse-project/parkTub-frontend
+   cd parkTub-project/parkTub-frontend
    ```
 
 6. **Install project dependencies:**
