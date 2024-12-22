@@ -87,6 +87,28 @@ TUB Parking aims to simplify parking management for urban transport users. By of
 
 The application will be available at [http://localhost:5173](http://localhost:5173) in your browser.
 
+## Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home.jpg)
+
+### Home2 Page
+
+![Home2 Page](screenshots/home2.jpg)
+
+### Bonus Page
+
+![Bonus Page](screenshots/bonus.jpg)
+
+### Payments Page
+
+![Payments Page](screenshots/payments.jpg)
+
+### Stripe Page
+
+![Stripe Page](screenshots/stripe.jpg)
+
 ### Maintainer
 
 - **Luis Silva** (Owner/Developer)
