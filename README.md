@@ -66,22 +66,30 @@ ParkTub aims to simplify parking management for urban transport users. By offeri
 
    config-server -> discovery -> customer -> parking -> bonus -> payment -> car-count-producer -> gateway
 
-5. **Navigate to the project frontend directory:**
+5. **Correct Google Maps usage:**
+   You will need to create .env file with VITE_google_maps_api_key=key
+
+6. **Stripe correct usage:**
+   In order to use Stripe, you need to setup the api key in application.properties file and the movies Id.
+
+7. **Navigate to the project frontend directory:**
 
    ```bash
    cd ../parkTub-frontend
    ```
 
-6. **Install project dependencies:**
+8. **Install project dependencies:**
 
    ```bash
    npm install
    ```
 
-7. **Start the development server:**
+9. **Start the development server:**
    ```bash
    npm run dev
    ```
+10. **Clear the LocalStorage:**
+    Clear your LocalStorage to make sure everything is working.
 
 The application will be available at [http://localhost:5173](http://localhost:5173) in your browser.
 
