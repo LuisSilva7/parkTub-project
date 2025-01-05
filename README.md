@@ -62,16 +62,14 @@ TUB Parking aims to simplify parking management for urban transport users. By of
    docker compose up -d
    ```
 
-4. **Install project dependencies:**
+4. **Run the backend server:**
 
-   ```bash
-   mvn spring-boot:run
-   ```
+   config-server -> discovery -> customer -> parking -> bonus -> payment -> car-count-producer -> gateway
 
 5. **Navigate to the project frontend directory:**
 
    ```bash
-   cd parkTub-project/parkTub-frontend
+   cd ../parkTub-frontend
    ```
 
 6. **Install project dependencies:**
