@@ -4,7 +4,7 @@ ParkTub is an online platform designed for managing parking spaces, payments, an
 
 # Why? (Motivation / Problem to Solve)
 
-TUB Parking aims to simplify parking management for urban transport users. By offering real-time parking information, convenient payment options, and personalized discounts, the platform enhances user experience and efficiency in urban mobility services.
+ParkTub aims to simplify parking management for urban transport users. By offering real-time parking information, convenient payment options, and personalized discounts, the platform enhances user experience and efficiency in urban mobility services.
 
 ## Features
 
