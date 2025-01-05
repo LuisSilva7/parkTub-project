@@ -23,10 +23,11 @@
    docker compose up -d
    ```
 
-4. **Install project dependencies:**
+4. **Run backend server:**
 
    ```bash
    mvn spring-boot:run
    ```
 
-The application will be available at http://localhost:8222.
+5. **Stripe correct usage:**
+   In order to use Stripe, you need to setup the api key in configurations/payment-service.yml file.

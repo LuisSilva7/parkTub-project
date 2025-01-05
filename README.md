@@ -70,7 +70,7 @@ ParkTub aims to simplify parking management for urban transport users. By offeri
    You will need to create .env file with VITE_google_maps_api_key=key
 
 6. **Stripe correct usage:**
-   In order to use Stripe, you need to setup the api key in application.properties file and the movies Id.
+   In order to use Stripe, you need to setup the api key in application.properties file.
 
 7. **Navigate to the project frontend directory:**
 
