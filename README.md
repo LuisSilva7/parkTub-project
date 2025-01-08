@@ -1,23 +1,18 @@
 # ParkTub - Urban Transport Parking System
 
-ParkTub is an online platform designed for managing parking spaces, payments, and discounts for users of the Transportes Urbanos de Braga (TUB) service. Users can view available parking spaces, apply for discounts/bonuses, and manage their parking payments seamlessly. The project is split into two main parts: the Frontend (the user interface) and the Backend (the API for handling parking data and payments).
-
-# Why? (Motivation / Problem to Solve)
-
-ParkTub aims to simplify parking management for urban transport users. By offering real-time parking information, convenient payment options, and personalized discounts, the platform enhances user experience and efficiency in urban mobility services.
+ParkTub is a mobile platform designed to simplify parking for users of Transportes Urbanos de Braga (TUB). It provides real-time parking availability updates and integrated payments offering an efficient parking experience.
 
 ## Features
 
-- **Real-Time Parking Lot Updates**: Parking lot availability is dynamically updated through seamless integration with Niop, Kafka and SSE (Server-Sent Events), ensuring users always have the latest information on available spots.
-- **Parking Session Management**: Users can manage their parking sessions with ease, including creating new sessions (check-in), viewing ongoing sessions, and finalizing sessions (check-out).
+- **Real-Time Parking Lot Updates**: Parking lot availability is dynamically updated through integration with Niop, Kafka and SSE (Server-Sent Events), ensuring users always have the latest information on available spots.
+- **Parking Session Management**: Users can manage their parking sessions easily, including creating new sessions (check-in), viewing ongoing sessions, and finalizing sessions (check-out).
 - **Payment Management**: Provides a comprehensive overview of all user payments, allowing them to view details, make payments, and track their payment history.
 - **Bonus Rewards**: Users can access and activate available bonuses, redeeming their points for rewards and benefits seamlessly.
-- **Mobile Design**: Access the platform on smartphones for seamless user experience.
+- **Mobile Design**: Access the platform on smartphones for greater user experience.
 
 ## Technologies Used
 
 - **Frontend**:
-
   - **React** - JavaScript library for building user interfaces.
   - **HTML** - Structure of the web application.
   - **CSS** - For styling the website and creating a responsive design.
@@ -26,13 +21,13 @@ ParkTub aims to simplify parking management for urban transport users. By offeri
 
 - **Backend**:
   - **Microservices Architecture** - The backend is structured into independent services, promoting scalability and fault tolerance.
-  - **Docker**: A containerization platform used to package and deploy the application in lightweight, isolated environments, ensuring consistency across different environments and simplifying the deployment process.
+  - **Docker**: A containerization platform used to package and deploy the application in lightweight, isolated environments, ensuring consistency across different environments.
   - **Java** - Programming language used for backend development.
   - **Spring Boot**: Framework for building the backend API and handling HTTP requests.
   - **Spring Data JPA**: Simplifies database interaction by providing an abstraction layer for managing data persistence.
-  - **Spring Validation**: Framework used for validating input data, ensuring correctness and adherence to defined rules.
-  - **Spring Cloud**: Provides tools for deploying and managing distributed systems.
-  - **Spring Config**: Centralized configuration management for microservices.
+  - **Spring Validation**: A framework used for validating input data, ensuring that the data received by the application meets the defined rules.
+  - **Spring Cloud Discovery**: Provides tools for deploying and managing distributed systems.
+  - **Spring Cloud Config**: Centralized configuration management for microservices.
   - **MySQL** - Relational database for storing parking, payment, and user data.
   - **Stripe** - Payment processing system for handling parking payments.
   - **Niop** - A low-code platform that simplifies the orchestration of intelligent systems, enabling easy programming of machines integrating AI, robotics, and automation.
