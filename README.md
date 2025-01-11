@@ -92,23 +92,27 @@ The application will be available at [http://localhost:5173](http://localhost:51
 
 ### Home Page
 
-<img src="screenshots/home.jpg" alt="Home Page" height="600">
+<img src="screenshots/home.jpg" alt="Home Page" height="550">
 
 ### Home2 Page
 
-<img src="screenshots/home2.jpg" alt="Home2 Page" height="600">
+<img src="screenshots/home2.jpg" alt="Home2 Page" height="550">
 
 ### Bonus Page
 
-<img src="screenshots/bonus.jpg" alt="Bonus Page" height="600">
+<img src="screenshots/bonus.jpg" alt="Bonus Page" height="550">
 
 ### Payments Page
 
-<img src="screenshots/payments.jpg" alt="Payments Page" height="600">
+<img src="screenshots/payments.jpg" alt="Payments Page" height="550">
 
 ### Stripe Page
 
-<img src="screenshots/stripe.jpg" alt="Stripe Page" height="600">
+<img src="screenshots/stripe.jpg" alt="Stripe Page" height="550">
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ### Maintainer
 
